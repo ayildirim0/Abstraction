@@ -15,8 +15,15 @@ namespace Abstraction
         {
             Console.WriteLine("Lütfen yaptığınız işi giriniz...");
             string task = Console.ReadLine();
-
-            Console.WriteLine($"{Name} {SurName} şirketin {Department} departmanında {task} olarak çalışıyorum");
+            if (!string.IsNullOrWhiteSpace(task))
+            {
+                Console.WriteLine($"{Name} {SurName} şirketin {Department} departmanında {task} olarak çalışıyorum");
+            }
+            else
+            {
+                Console.WriteLine("Yaptığınız işi giriniz...");
+            }
+           
         }
     }
 }
